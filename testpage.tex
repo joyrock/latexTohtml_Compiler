@@ -1,0 +1,66 @@
+\documentclass{article}
+\begin{document}
+
+Without specifying width for last column:
+
+\begin{table}[h]
+    \begin{tabular}{  l  l  l  l}
+    \hline
+    Day & Min Temp & Max Temp & Summary \\ \hline
+    Monday & 11 & 22C & A clear day with lots of sunshine.
+    However, the strong breeze will bring down the temperatures. \\ \hline
+    Tuesday & 9C & 19C & Cloudy with rain, across many northern regions. Clear spells
+    across most of Scotland and Northern Ireland,
+    but rain reaching the far northwest. \\ \hline
+    Wednesday & 10C & 21C & Rain will still linger for the morning.
+    Conditions will improve by early afternoon and continue
+    throughout the evening. \\
+    \hline
+    \end{tabular}
+\end{table}
+
+$ x^2 = x - 4 $
+$ \frac{a}{b} $
+
+owever, the strong breeze will bring down the temperatures. \\ Tuesday Cloudy with rain, across many northern regions. Clear spells
+Hello \hspace world
+
+With width specified:
+
+\begin{table}[h]
+    \begin{tabular}{ | r | l | l | l}
+  \hline
+    Day & Min Temp & Max Temp & Summary \\ \hline
+    Monday & 11C & 22C & A clear day with lots of sunshine.  
+    However, the strong breeze will bring down the temperatures. \\ \hline
+    Tuesday & 9C & 19C & Cloudy with rain, across many northern regions. Clear spells
+    across most of Scotland and Northern Ireland,
+    but rain reaching the far northwest. \\ \hline
+    Wednesday & 10C & 21C & Rain will still linger for the morning.
+    Conditions will improve by early afternoon and continue
+    throughout the evening. \\
+    \hline
+    \end{tabular}
+\end{table}
+
+
+\begin{table}[h]
+    \begin{tabular}{|l|r|}
+  \hline
+       row1col1 & row1col2 \\ 
+	\hline 
+       row2col1 & row2col2 \\
+       \hline \hline \hline \hline
+       row3col1 & row3col2 \\
+	\hline
+     \end{tabular}
+
+  \begin{tabular}{c|c c|}
+       row1col1 & row1col2 \\
+       row2col1 & row2col2 & row2col3 \\
+       row3col1 & row3col2 \\
+	
+     \end{tabular}
+\end{table}
+
+\end{document}

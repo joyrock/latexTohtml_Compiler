@@ -49,12 +49,12 @@ operator	("+"|"-"|"=")
 "tabular"		{printf(" %s \n", yytext);fflush(stdout); return(TABULAR);}
 "vspace"		{printf(" %s \n", yytext);fflush(stdout); return(VSPACE);}
 "\\hline"		{printf(" %s \n", yytext);fflush(stdout); return(HLINE);}
-"b"			{printf(" %s \n", yytext);fflush(stdout); if(inmath == 0) return(B); else return(LETTERS) ;}
-"c"			{printf(" %s \n", yytext);fflush(stdout); if(inmath == 0) return(C); else return(LETTERS);}
-"h"			{printf(" %s \n", yytext);fflush(stdout); if(inmath == 0) return(H); else return(LETTERS);}
-"l"			{printf(" %s \n", yytext);fflush(stdout); if(inmath == 0) return(L); else return(LETTERS);}
-"r"			{printf(" %s \n", yytext);fflush(stdout); if(inmath == 0) return(R); else return(LETTERS);}
-"t"			{printf(" %s \n", yytext);fflush(stdout); if(inmath == 0) return(T); else return(LETTERS);}
+"b"			{printf(" %s \n", yytext);fflush(stdout); if(inmath == 0) return(B); else {yylval.arr = strdup(yytext); return(LETTERS);}}
+"c"			{printf(" %s \n", yytext);fflush(stdout); if(inmath == 0) return(C); else {yylval.arr = strdup(yytext); return(LETTERS);}}
+"h"			{printf(" %s \n", yytext);fflush(stdout); if(inmath == 0) return(H); else {yylval.arr = strdup(yytext); return(LETTERS);}}
+"l"			{printf(" %s \n", yytext);fflush(stdout); if(inmath == 0) return(L); else {yylval.arr = strdup(yytext); return(LETTERS);}}
+"r"			{printf(" %s \n", yytext);fflush(stdout); if(inmath == 0) return(R); else {yylval.arr = strdup(yytext); return(LETTERS);}}
+"t"			{printf(" %s \n", yytext);fflush(stdout); if(inmath == 0) return(T); else {yylval.arr = strdup(yytext); return(LETTERS);}}
 
 "\\frac"		{printf(" %s \n", yytext);fflush(stdout); return(FRAC);}
 "\\sqrt"		{printf(" %s \n", yytext);fflush(stdout); return(SQRT);}
